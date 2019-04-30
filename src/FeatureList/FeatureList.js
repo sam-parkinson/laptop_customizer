@@ -5,7 +5,15 @@ class FeatureList extends Component {
 
   render() {
     return (
-      null
+      <li key={this.props.index} className="feature__item">
+        <div className={this.props.featureClass}
+          
+          onClick={e => this.updateFeature((this.props.name), (this.props.item))}>
+            { this.props.item.name }
+            ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+              .format(this.props.item.cost) })
+        </div>
+      </li>
     );
   }
 }
