@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './FeatureList.css';
+import './FeatureChoice.css';
 
-class FeatureList extends Component {
+class FeatureChoice extends Component {
 
   render() {
     return (
@@ -18,4 +18,4 @@ class FeatureList extends Component {
   }
 }
 
-export default FeatureList
+export default FeatureChoice
