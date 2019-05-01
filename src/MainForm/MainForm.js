@@ -10,7 +10,8 @@ class MainForm extends Component {
         <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
         <ShopList 
           features={this.props.features}
-          selected={this.props.selected}/>
+          selected={this.props.selected}
+          updateFeature={this.props.updateFeature}/>
       </section>
     )
   }

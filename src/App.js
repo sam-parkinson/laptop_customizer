@@ -30,7 +30,9 @@ class App extends Component {
 
   updateFeature(feature, newValue) {
     const selected = Object.assign({}, this.state.selected);
+    console.log(selected);
     selected[feature] = newValue;
+    console.log(selected);
     this.setState({
       selected
     });
@@ -47,7 +49,8 @@ class App extends Component {
         <main>
           <MainForm 
             features={this.props.features} 
-            selected={this.state.selected}/>
+            selected={this.state.selected}
+            updateFeature={(feature, newValue) => this.updateFeature(feature, newValue)}/>
           <MainSummary
             selected={this.state.selected}/>          
         </main>

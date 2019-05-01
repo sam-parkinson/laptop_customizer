@@ -8,7 +8,13 @@ class Feature extends Component {
       const selectedClass = item.name === this.props.selected.name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
       return (
-        <FeatureList index={index} item={item} featureClass={featureClass} />
+        <FeatureList 
+          key={index}
+          name={this.props.name} 
+          index={index} 
+          item={item} 
+          featureClass={featureClass} 
+          update={this.props.updateFeature}/>
       )
     });
 
